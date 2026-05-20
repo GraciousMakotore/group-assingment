@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Le_gendary supplies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Le_gendary supplies</div>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <main class="container" style="margin-top:28px;">
+    <div class="content">
+      <h2 class="section-title">Get in Touch</h2>
+      <p><strong>Le_gendary supplies — Head Office</strong><br>
+      45 Industrial Road, Mt Pleasant, Harare, Zimbabwe<br>
+      P.O. Box MP167, Harare</p>
+      <p><strong>Phone:</strong> +263 77 000 0000<br>
+      <strong>Email:</strong> sales@le_gendary.supplies</p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Key Contacts</h2>
+      <table class="info-table">
+        <tbody>
+          <tr><th>Sales</th><td>Mr. Sales Manager — sales@le_gendary.supplies — +263 77 000 0001</td></tr>
+          <tr><th>Service & Support</th><td>support@le_gendary.supplies — +263 77 000 0002</td></tr>
+          <tr><th>Technical Enquiries</th><td>tech@le_gendary.supplies — +263 77 000 0003</td></tr>
+        </tbody>
+      </table>
+      <img src="mc2.jpeg" alt="Office / team" style="width:20%;margin-top:12px;">
+    </div>
+
+    <section class="fade-in contact-section">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Full Name" required>
+        <input type="email" id="contact-email" placeholder="Email Address" required>
+        <input type="tel" id="contact-phone" placeholder="Phone (optional)">
+        <select id="contact-dept" aria-label="Subject">
+          <option value="sales">Sales / Quotes</option>
+          <option value="support">Service & Support</option>
+          <option value="technical">Technical Enquiry</option>
+          <option value="general">General Enquiry</option>
+        </select>
+        <textarea id="contact-message" placeholder="Message / Inquiry" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div class="content">
+      <h2 class="section-title">Location & Map</h2>
+      <p><a href="https://www.google.com/maps/search/Le_gendary+supplies+Harare" target="_blank" rel="noopener">View on Google Maps</a></p>
+      <p>Head Office: Mt Pleasant, Harare.</p>
+      <img src="map.jpeg" alt="map" style="width:75%;border-radius:8px;margin-top:8px;">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Le_gendary supplies. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
