@@ -1,0 +1,171 @@
+/* styles.css - UZ Biomedical Engineering Discipline */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* { box-sizing: border-box; }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #1b2b3a;
+    background: #f5f8fb;
+    line-height: 1.55;
+}
+
+.content, .card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease;
+}
+
+.content.show, .card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===== WATERMARK - inserted here ===== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('mc3.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 600px auto;
+    opacity: 0.10;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 28px;
+    background: linear-gradient(90deg,#0250aa,#0070b1);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 900px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #012a4a;
+        width: 220px;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+
+        transform: translateX(100%);
+        transition: 0.4s ease;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.dark-mode {
+    background: #0b1e2d;
+    color: #e6f1ff;
+}
+
+.dark-mode .content,
+.dark-mode .card {
+    background: #132f44;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background: #001d3d;
+}
+
+.logo { font-weight: 700; font-size: 18px; }
+.nav-links { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
+.nav-links a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 6px; transition: background 0.25s, transform 0.15s; }
+.nav-links a:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+.hero { display: grid; grid-template-columns: 1fr 420px; gap: 24px; align-items: center; padding: 48px; }
+.hero .left { max-width: 760px; }
+.hero h1 { margin: 0 0 12px 0; font-size: 36px; color: #012a4a; }
+.hero p { margin: 0 0 18px 0; color: #234e70; }
+.hero img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(2,40,80,0.08); }
+
+.container { max-width: 1100px; margin: 30px auto; padding: 0 18px; }
+.card-grid { display: flex; gap: 18px; flex-wrap: wrap; }
+.card { background: white; border-radius: 10px; padding: 18px; flex: 1 1 300px; box-shadow: 0 6px 18px rgba(10,30,60,0.06); }
+.card h3 { margin-top: 0; }
+.section-title { color: #023e6b; margin-bottom: 14px; }
+
+.content { background: white; padding: 22px; border-radius: 10px; box-shadow: 0 6px 20px rgba(2,40,80,0.04); margin-bottom: 24px; }
+
+.footer { text-align: center; padding: 20px; margin-top: 40px; background: #012a4a; color: #fff; }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table th, .info-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eef6fb; }
+.info-table th { width: 240px; color: #0b4a6f; }
+
+@media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 28px; }
+    .nav-links { display: none; }
+}
