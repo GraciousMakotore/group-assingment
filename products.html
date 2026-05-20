@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services & Partnerships — Le_gendary supplies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Le_gendary supplies</div>
+
+    <button class="menu-btn" aria-label="Open menu" type="button">☰</button>
+
+    <!-- Force links visible as a fallback if CSS/JS doesn't load -->
+    <ul class="nav-links" style="display:flex;gap:16px;align-items:center;list-style:none;margin:0;padding:0;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle" aria-label="Toggle theme" type="button">🌙</button>
+  </header>
+
+  <main class="container" style="margin-top:28px;">
+    <div class="content">
+      <h2 class="section-title">How to Order</h2>
+      <ol>
+        <li>Browse our product catalog on the Products page or request a tailored quote.</li>
+        <li>Request a quote online or email sales@le_gendary.supplies with product codes and delivery details.</li>
+        <li>Receive a proforma invoice — confirm order by email or purchase order.</li>
+        <li>We arrange shipping and installation; payment terms are shown on the invoice.</li>
+      </ol>
+      <p><a class="btn" href="catalog.html">Browse Products</a> <a class="btn outline" href="contact.html">Request Quote</a></p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Distribution & Partnership</h2>
+      <p>Le_gendary supplies partners with clinics, labs and distributors. Become an authorised reseller or partner for regional distribution. Benefits include priority pricing, training, and co-marketing support.</p>
+      <ul>
+        <li>Partner onboarding and certification</li>
+        <li>Volume discounts and credit terms for approved partners</li>
+        <li>Joint procurement and tender support</li>
+      </ul>
+      <p>Interested organisations: email partnerships@le_gendary.supplies</p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Careers & Apply</h2>
+      <p>We hire technicians, sales specialists, and operations staff. Current openings are listed below — send CV and cover letter to careers@le_gendary.supplies.</p>
+      <table class="info-table">
+        <tbody>
+          <tr><th>Open Roles</th><td>Service Engineer, Sales Executive, Logistics Coordinator</td></tr>
+          <tr><th>Application</th><td>Send CV to careers@le_gendary.supplies with the role in the subject line</td></tr>
+        </tbody>
+      </table>
+      <p><a class="btn" href="mailto:careers@le_gendary.supplies">Apply Now</a></p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Shipping, Warranty & Support</h2>
+      <p>We offer nationwide delivery, installation and a standard 12-month warranty on most equipment. Service contracts and extended warranties are available.</p>
+      <ul>
+        <li>Same-week dispatch to major centres</li>
+        <li>Certified technicians for installation and preventative maintenance</li>
+        <li>24/5 technical support for contract customers</li>
+      </ul>
+      <p>For service requests email support@le_gendary.supplies or call +263 77 000 0002.</p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Pricing & Financing (Indicative)</h2>
+      <table class="info-table">
+        <tbody>
+          <tr><th>Small Devices</th><td>From USD 50</td></tr>
+          <tr><th>Diagnostic Equipment</th><td>USD 500 – 15,000</td></tr>
+          <tr><th>Full Lab Setups</th><td>Custom quotes — contact sales</td></tr>
+        </tbody>
+      </table>
+      <p>Financing options and leasing available for qualified customers. Contact finance@le_gendary.supplies for terms.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Le_gendary supplies. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+  <!-- Small page-specific script to ensure header controls work even if main script fails -->
+  <script>
+    (function(){
+      const menuBtn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.nav-links');
+      if (menuBtn && nav) {
+        menuBtn.addEventListener('click', () => {
+          // toggle simple inline fallback for visibility
+          nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+        });
+      }
+
+      const themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          themeBtn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

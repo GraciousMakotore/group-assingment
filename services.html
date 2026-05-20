@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Products & Solutions — Le_gendary supplies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Small page-specific styles for the in-page catalog dropdown */
+    .catalog-dropdown { display:inline-block; vertical-align:middle; }
+    .catalog-dropdown summary { cursor:pointer; list-style:none; padding:10px 14px; border-radius:6px; border:1px solid #2b6cb0; background:#2b6cb0; color:#fff; }
+    .catalog-dropdown[open] summary { border-bottom-left-radius:0; border-bottom-right-radius:0; }
+    .catalog-dropdown .catalog-content { margin-top:8px; padding:12px; background:#fff; border:1px solid #e2e8f0; border-radius:6px; width:320px; box-shadow:0 6px 18px rgba(15,23,42,0.08); }
+    .catalog-content ul { margin:8px 0 0 0; padding-left:18px; }
+    .catalog-content a { color:#2b6cb0; text-decoration:underline; }
+    .catalog-content p { margin:0 0 8px 0; color:#334155; }
+    @media (max-width:520px) {
+      .catalog-dropdown .catalog-content { width:100%; }
+      .catalog-dropdown summary { width:100%; display:block; text-align:left; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Le_gendary supplies</div>
+
+    <button class="menu-btn" aria-label="Open menu" type="button">☰</button>
+
+    <!-- Force links visible as a fallback if CSS/JS doesn't load -->
+    <ul class="nav-links" style="display:flex;gap:16px;align-items:center;list-style:none;margin:0;padding:0;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle" aria-label="Toggle theme" type="button">🌙</button>
+  </header>
+
+  <main class="container" style="margin-top:28px;">
+    <div class="content">
+      <h2 class="section-title">Our Product Categories</h2>
+      <p>Le_gendary supplies offers a curated selection of medical devices, laboratory instruments and consumables to hospitals, clinics and diagnostic centres.</p>
+      <ul>
+        <li><strong>Patient Care & Monitoring:</strong> Multiparameter monitors, infusion pumps, patient beds and vital-sign devices.</li>
+        <li><strong>Diagnostic Equipment:</strong> Ultrasound, ECG, X-ray accessories and point-of-care analyzers.</li>
+        <li><strong>Laboratory Instruments:</strong> Centrifuges, microscopes, spectrophotometers and clinical chemistry analyzers.</li>
+        <li><strong>Consumables & PPE:</strong> Reagents, disposables, swabs and protective equipment.</li>
+      </ul>
+
+      <p>
+        <!-- Accessible in-page dropdown providing quick category links and short info -->
+        <details class="catalog-dropdown" aria-haspopup="true">
+          <summary class="btn" aria-expanded="false">View Catalog & Categories ▾</summary>
+          <div class="catalog-content" role="region" aria-label="Catalog categories">
+            <p>Quick links to category sections and short descriptions.</p>
+            <ul>
+              <li><a href="products.html#patient-care">Patient Care & Monitoring</a> — monitors, pumps, beds.</li>
+              <li><a href="products.html#diagnostics">Diagnostic Equipment</a> — ultrasound, ECG, POC analyzers.</li>
+              <li><a href="products.html#lab-instruments">Laboratory Instruments</a> — centrifuges, microscopes, analyzers.</li>
+              <li><a href="products.html#consumables">Consumables & PPE</a> — reagents, disposables, PPE.</li>
+            </ul>
+            <p style="margin-top:8px;"><a class="btn outline" href="products.html">Open Full Catalog</a></p>
+          </div>
+        </details>
+
+        <a class="btn outline" href="contact.html" style="margin-left:12px;">Request a Quote</a>
+      </p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Featured Solutions</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Turnkey Lab Setup</h3>
+          <p>Complete lab design, equipment supply and installation for clinical and research facilities.</p>
+        </div>
+        <div class="card">
+          <h3>Clinical Equipment Service</h3>
+          <p>Installation, preventive maintenance and on-site repairs by certified technicians.</p>
+        </div>
+        <div class="card">
+          <h3>Procurement for NGOs & Hospitals</h3>
+          <p>Volume purchasing, tender support and logistics for large projects.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">How to Order</h2>
+      <ol>
+        <li>Browse the catalog or contact sales with required items and quantities.</li>
+        <li>Receive a tailored quotation and lead times.</li>
+        <li>Confirm order by purchase order or proforma invoice payment.</li>
+        <li>We arrange delivery, installation and training where required.</li>
+      </ol>
+      <p>Contact sales: <a href="mailto:sales@le_gendary.supplies">sales@le_gendary.supplies</a> • Phone: +263 77 000 0000</p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Technical Specifications & Support</h2>
+      <p>Product datasheets, user manuals and maintenance contracts are available for all major lines. We provide spare parts and extended warranty options.</p>
+      <p>For support: <a href="mailto:support@le_gendary.supplies">support@le_gendary.supplies</a> • +263 77 000 0002</p>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Careers & Partnerships</h2>
+      <p>We recruit service engineers, sales specialists and logistics staff. Organisations can enquire about reseller and distribution partnerships.</p>
+      <p><a class="btn" href="apply.html">Careers</a> <a class="btn outline" href="contact.html">Partner With Us</a></p>
+    </div>
+
+    <!-- Product details modal -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Product Details</h2>
+        <p id="modal-text">Select a product from the catalog for full specifications, pricing and lead time.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Le_gendary supplies. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+  <script>
+    // Enhance accessibility: toggle aria-expanded on the <summary>
+    (function(){
+      const details = document.querySelector('.catalog-dropdown');
+      if (!details) return;
+      const summary = details.querySelector('summary');
+      if (!summary) return;
+      details.addEventListener('toggle', () => {
+        summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>
